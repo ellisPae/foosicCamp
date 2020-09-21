@@ -17,4 +17,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
 end
 
 
-users belong_to :genre
+
+# if user is_fan? => artist_name
+# col: also_fan?:boolean
