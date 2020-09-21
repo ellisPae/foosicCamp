@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
     end
-x
+
     
 #     def update
 #         @poem = Poem.find(params[:id])
