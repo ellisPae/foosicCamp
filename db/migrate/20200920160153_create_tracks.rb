@@ -18,3 +18,7 @@ class CreateTracks < ActiveRecord::Migration[5.2]
     # add_index :tracks, :title
   end
 end
+
+# user(artist)   genre
+# songs       genre
+# albums      genre
