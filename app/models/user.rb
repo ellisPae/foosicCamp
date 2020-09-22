@@ -1,10 +1,12 @@
 class User < ApplicationRecord
 
-    validates :username, :password_digest, :session_token, presence: true
+    validates :username, :password_digest, :session_token, :location, presence: true
     validates :username, :email, uniqueness: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
     before_validation :ensure_session_token
+
+    belongs_to :genreable, :polymorphic => true
 
 
     
@@ -12,7 +14,7 @@ class User < ApplicationRecord
 
 
     def self.find_by_credentials (username, password) 
-        user = User.find_by(username: username)
+        user = User.find_by(username: username) ||= User.find_by(email: email)
         user && user.is_password?(password) ? user : nil
     end
 
