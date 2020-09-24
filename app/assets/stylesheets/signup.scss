@@ -1,0 +1,187 @@
+.session-form-container {
+    display: flow-root;
+    background-color: #f3f3f3;
+    justify-content: center;
+    align-items: center;
+}
+
+// .session-form-header-container {
+//     height: 90px;
+// }
+
+.session-header-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    font-family: sans-serif;
+    background-color: #DDDDDD;
+    padding-left: 50px;
+    height: 105px;
+}
+
+
+.session-form-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 10% 10% 10%;
+    width: 80%;
+}
+
+
+.session-square-logo {
+    color: #1da0c3;
+    font-size: 75px;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    padding: 20px;
+}
+
+.session-logo {
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+    padding-top: 10px;
+
+}
+
+.session-header {
+    display: flex;
+    height: 30px;
+    width: 80%;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px dotted #ccc;
+    justify-content: center;
+    align-self: center;
+    box-sizing: border-box;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 850px;
+}
+
+.session-parent-container {
+    background-color: #f3f3f3;
+    max-height: initial;
+}
+
+.session-form2-box {
+    width: 650px;
+    min-height: 550px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.session-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.session-form > * {
+    flex: 1 1 100%;
+}
+
+.something {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-label {
+
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+    margin-top: 8px;
+    vertical-align: top;
+    font-size: 16px;
+    margin-right: 16px;
+    font-family: sans-serif;
+
+}
+
+.form-input {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 5%;
+    border: 1px solid lightgray;
+    // padding: 5px
+    width: 75%;
+    max-width: 300px;
+    font-size: 16px;
+    margin: 0 auto 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border-radius: 3%;
+    line-height: 1.5em;
+}
+
+#artist-name {
+    padding-bottom: 40px;
+
+}
+
+
+.session-buttons {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.session-submit {
+    display: inline-block;
+    background-color: #00a1c6;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    height: 36px;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 1;
+    padding: 5px;
+    line-height: 1.5em;
+    cursor: pointer;
+}
+
+.signup-to-login-link {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    padding: 50px;
+}
+
+.login-link1 {
+    color: #00a1c6;
+}
+
+
+
+
+.error-li {
+    text-decoration: none;
+    list-style: none;
+    color: red;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

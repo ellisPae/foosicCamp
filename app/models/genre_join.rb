@@ -1,8 +1,0 @@
-class GenreJoin < ApplicationRecord
-
-
-    
-
-
-
-end

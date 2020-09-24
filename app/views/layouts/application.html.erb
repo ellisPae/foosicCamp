@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Foosic Camp</title>
+    <title>foosicamp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('record_player_icon.png') %>
+    <script type='text/javascript'>
+      window.user_logo = "<%= image_url('user_logo.png') %>"
+      window.lightning_icon = "<%= image_url('lightning_icon.png') %>"
+      window.heart_icon = "<%= image_url('heart_icon.png') %>"
+    </script>
   </head>
 
   <body>
