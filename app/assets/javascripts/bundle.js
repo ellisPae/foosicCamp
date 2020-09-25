@@ -274,7 +274,7 @@ var Newsfeed = function Newsfeed() {
     className: "newsfeed1-tag"
   }, "SCENE REPORT"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed-right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/newsfeed2"
@@ -285,7 +285,7 @@ var Newsfeed = function Newsfeed() {
     className: "newsfeed234-title"
   }, "How Covid-19 is Affecting the Music Industry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed234-tag"
-  }, "SCENE REPORT")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "SCENE REPORT"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/newsfeed1"
@@ -294,7 +294,7 @@ var Newsfeed = function Newsfeed() {
     alt: "newsfeed3-img"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed234-title"
-  }, "Less Than a Year on the Scene and already Making Noise"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Less Than a Year on the Scene and Already Making Noise"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed234-tag"
   }, "FEATURES"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed4"
@@ -305,7 +305,7 @@ var Newsfeed = function Newsfeed() {
     alt: "newsfeed4-img"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed234-title"
-  }, "Why Artists are Leaving Spotify"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Why Artists Are Leaving Ooify"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "newsfeed234-tag"
   }, "SCENE REPORT"))))));
 };

@@ -23,3 +23,6 @@ end
 
 # if user is_fan? => artist_name
 # col: also_fan?:boolean
+
+
+# genre_id
