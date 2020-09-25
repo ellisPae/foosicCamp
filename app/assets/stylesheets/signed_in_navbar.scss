@@ -7,8 +7,7 @@
     max-height: 70px;
     width: 300px;
     padding: 15 0 0 0;
-    justify-content: space-evenly;
- 
+    justify-content: space-between;
     box-sizing: content-box;
 }   
 
@@ -75,8 +74,8 @@
 
 .newsfeed-img {
     display: flex;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     align-items: center;
     justify-content: center;
@@ -85,8 +84,8 @@
 
 .collection-img {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     align-items: center;
     background-color: transparent;
@@ -94,8 +93,8 @@
 
 .circle-img {
     display: flex;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     position: relative;
     align-items: center;

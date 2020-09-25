@@ -9,6 +9,13 @@ class Api::UsersController < ApplicationController
             render "api/users/show"
         else
             render json: @user.errors.full_messages, status: 422
+            # {
+            #     name: "Please enter your band name.",
+            #     username: "Please enter your username",
+            #     pw: "Please enter your password.",
+            #     email: "Please enter your email.",
+            #     agreement: "You must agree to the Terms of Use to create an account."
+            # }
         end
     end
 

@@ -22,6 +22,8 @@ class User < ApplicationRecord
         user
     end
 
+    
+
 
 
     def self.find_by_email(email, password)

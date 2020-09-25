@@ -25,7 +25,6 @@ class SessionForm extends React.Component {
     }
 
 
-
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
@@ -51,6 +50,7 @@ class SessionForm extends React.Component {
     
     renderLoginEmailUsername(formType) {
         if (formType === "login") {
+            
             return (
                 <div className="something">
                     <label className='form-label'>Email/Username:</label>
@@ -59,6 +59,10 @@ class SessionForm extends React.Component {
             )
         }
     }
+
+
+
+
     
     renderPassword(formType) {
         if (formType === "signup" || formType === "login") {

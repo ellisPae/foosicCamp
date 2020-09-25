@@ -7,12 +7,14 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 // import SplashContainer from './splash/splash_container';
 import MainNavContainer from './navbar/usernav_container';
+import Newsfeed from './main/splash_newsfeed';
 
 const App = () => (
     <div>
         <header>
             <Route exact path='/' component={MainNavContainer} />  
         </header>
+        < Newsfeed />
         <Switch>
             {/* <ProtectedRoute exact path="/" component={SplashContainer} */}
             <AuthRoute exact path="/login" component={LogInFormContainer} />
