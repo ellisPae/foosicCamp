@@ -97,6 +97,54 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
 
 /***/ }),
 
+/***/ "./frontend/actions/genre_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/genre_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_ALL_GENRES, RECEIVE_GENRE, receiveAllGenres, receiveGenre, fetchGenres, fetchGenre */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_GENRES", function() { return RECEIVE_ALL_GENRES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_GENRE", function() { return RECEIVE_GENRE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllGenres", function() { return receiveAllGenres; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveGenre", function() { return receiveGenre; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGenres", function() { return fetchGenres; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGenre", function() { return fetchGenre; });
+/* harmony import */ var _util_genre_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/genre_api_util */ "./frontend/util/genre_api_util.js");
+
+var RECEIVE_ALL_GENRES = 'RECEIVE_ALL_GENRES';
+var RECEIVE_GENRE = 'RECEIVE_GENRE';
+var receiveAllGenres = function receiveAllGenres(genres) {
+  return {
+    type: RECEIVE_ALL_GENRES,
+    genres: genres
+  };
+};
+var receiveGenre = function receiveGenre(genre) {
+  return {
+    type: RECEIVE_GENRE,
+    genre: genre
+  };
+};
+var fetchGenres = function fetchGenres() {
+  return function (dispatch) {
+    return _util_genre_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchGenres"]().then(function (genres) {
+      return dispatch(receiveAllGenres(genres));
+    });
+  };
+};
+var fetchGenre = function fetchGenre(genreId) {
+  return function (dispatch) {
+    return _util_genre_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchGenre"](genreId).then(function (genre) {
+      return dispatch(receiveGenre(genre));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/modal_actions.js":
 /*!*******************************************!*\
   !*** ./frontend/actions/modal_actions.js ***!
@@ -1235,6 +1283,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./frontend/reducers/genres_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/genres_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_genre_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/genre_actions */ "./frontend/actions/genre_actions.js");
+
+
+var genresReducer = function genresReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var newState = Object.assign({}, oldState);
+
+  switch (action.type) {
+    case _actions_genre_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_GENRES"]:
+      newState = action.genres;
+      return newState;
+
+    case _actions_genre_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_GENRE"]:
+      newState[action.genre.id] = action.genre;
+      return newState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (genresReducer);
+
+/***/ }),
+
 /***/ "./frontend/reducers/modal_reducer.js":
 /*!********************************************!*\
   !*** ./frontend/reducers/modal_reducer.js ***!
@@ -1281,6 +1365,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal_reducer */ "./frontend/reducers/modal_reducer.js");
 /* harmony import */ var _tracks_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tracks_reducer */ "./frontend/reducers/tracks_reducer.js");
 /* harmony import */ var _albums_reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./albums_reducer */ "./frontend/reducers/albums_reducer.js");
+/* harmony import */ var _genres_reducer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./genres_reducer */ "./frontend/reducers/genres_reducer.js");
+
 
 
 
@@ -1294,7 +1380,8 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
   errors: _errors_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
   modal: _modal_reducer__WEBPACK_IMPORTED_MODULE_4__["default"],
   tracks: _tracks_reducer__WEBPACK_IMPORTED_MODULE_5__["default"],
-  albums: _albums_reducer__WEBPACK_IMPORTED_MODULE_6__["default"]
+  albums: _albums_reducer__WEBPACK_IMPORTED_MODULE_6__["default"],
+  genres: _genres_reducer__WEBPACK_IMPORTED_MODULE_7__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -1469,6 +1556,30 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/genre_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/genre_api_util.js ***!
+  \*****************************************/
+/*! exports provided: fetchGenres, fetchGenre */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGenres", function() { return fetchGenres; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGenre", function() { return fetchGenre; });
+var fetchGenres = function fetchGenres() {
+  return $.ajax({
+    url: 'api/genres'
+  });
+};
+var fetchGenre = function fetchGenre(genreId) {
+  return $.ajax({
+    url: "api/genres/".concat(genreId)
+  });
+};
 
 /***/ }),
 

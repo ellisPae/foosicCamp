@@ -3,13 +3,14 @@ class Api::TracksController < ApplicationController
     before_action :ensure_logged_in, only: %w(create edit destroy)
     
     def index
+
         @tracks = Track.all
-        render :index
+        render "api/tracks/index"
     end
 
     def show
         @track = Track.find(params[:id])
-        render :show
+        render "api/tracks/show"
     end
 
     def create
@@ -17,7 +18,7 @@ class Api::TracksController < ApplicationController
         @track.artist_id = current_user.id
         
         if @track.save
-            redirect user_url(@track.artist_id)
+           render "api/users/show"
         else
             render json @track.errors.full_messages, status: 422
         end
@@ -26,7 +27,7 @@ class Api::TracksController < ApplicationController
 
    def edit
         @track = Track.find(params[:id])
-        render :edit
+        render "api/tracks/edit"
     end
 
 
@@ -35,10 +36,9 @@ class Api::TracksController < ApplicationController
         @track.artist_id = current_user.id
         
         if @track.update(track_params)
-            redirect_to user_url(@track.artist_id)
+            render "api/tracks/show"
         else
             flash[:errors] = @track.errors.full_messages
-            redirect_to user_url(@track.artist_id)
         end
     end
 
@@ -46,7 +46,7 @@ class Api::TracksController < ApplicationController
     def destroy
         @track = current_user.tracks.find_by(id: params[:id])
         @track.delete if @track && @track.artist_id == current_user.id
-        redirect_to user_url(@track.artist_id)
+        render "api/users/show"
     end
 
     private 

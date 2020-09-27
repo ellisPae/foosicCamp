@@ -4,12 +4,12 @@ class Api::AlbumsController < ApplicationController
     
     def index
         @albums = Album.all
-        render :index
+        render "api/albums/index"
     end
 
     def show
         @album = album.find(params[:id])
-        render :show
+        render "api/albums/show"
     end
 
 
@@ -18,7 +18,7 @@ class Api::AlbumsController < ApplicationController
         @album.artist_id = current_user.index
         
         if @album.save
-            render :show
+            render "api/users/show"
         else
             render json @album.errors.full_messages, status: 422
         end
@@ -27,7 +27,7 @@ class Api::AlbumsController < ApplicationController
 
    def edit
         @album = album.find(params[:id])
-        render :edit
+        render "api/albums/edit"
     end
 
 
@@ -36,10 +36,9 @@ class Api::AlbumsController < ApplicationController
         @album.artist_id = current_user.id
         
         if @album.update(album_params)
-            redirect_to user_url(@album.artist_id)
+            render "api/albums/show"
         else
             flash[:errors] = @album.errors.full_messages
-            redirect_to user_url(@album.artist_id)
         end
     end
 
@@ -47,7 +46,7 @@ class Api::AlbumsController < ApplicationController
     def destroy
         @album = current_user.albums.find_by(id: params[:id])
         @album.delete if @album && @album.artist_id == current_user.id
-        redirect_to user_url(@album.artist_id)
+        render "api/users/show"
     end
 
 

@@ -6,6 +6,7 @@ import errors from './errors_reducer';
 import modal from './modal_reducer';
 import tracks from './tracks_reducer';
 import albums from './albums_reducer';
+import genres from './genres_reducer';
 
 
 const rootReducer = combineReducers(
@@ -15,7 +16,8 @@ const rootReducer = combineReducers(
         errors,
         modal,
         tracks,
-        albums
+        albums,
+        genres
     }
 )
 

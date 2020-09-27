@@ -21,9 +21,4 @@ class Genre < ApplicationRecord
         source: :genreable,
         source_type: :Album
 
-    Rock => genre.id = 5
-    track.genre_id = genre.id
-    
-    this.handleClick() => this.props.genre
-
 end

@@ -6,9 +6,7 @@ class Track < ApplicationRecord
         class_name: :User,
         foreign_key: :artist_id
 
-    belongs_to :album,
-        class_name: :Album,
-        foreign_key: :album_id
+    belongs_to :album, optional: true
     
 
     has_many :genre_joins, :as => :genreable

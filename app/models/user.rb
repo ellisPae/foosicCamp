@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
     has_many :genre_joins, :as => :genreable
 
-    has_one :genre,
+    has_many :genres,
         through: :genre_joins,
         source: :genre
 
@@ -18,7 +18,7 @@ class User < ApplicationRecord
 
     has_many :albums,
         class_name: :Album,
-        foreign_key: :artist_id,
+        foreign_key: :artist_id
 
 
     attr_reader :password

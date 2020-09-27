@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     resources :tracks, only: %w(index show edit update destroy)
     # tracks/
     resources :albums, only: %w(index show edit update destroy)
+    resources :genres, only: %w(index show)
+    resources :genre_joins, only: %w(create update destroy)
   end
 
   root "static_pages#root"
