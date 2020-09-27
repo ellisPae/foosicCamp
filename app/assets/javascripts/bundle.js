@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/album_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/album_actions.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/ellispae/Documents/aA/fs_project/foosic_camp/frontend/actions/album_actions.js: Unterminated string constant (1:30)\n\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33m*\u001b[39m as \u001b[33mAlbumApiUtil\u001b[39m from \u001b[32m'../util/album_api_util;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mRECEIVE_ALL_ALBUMS\u001b[39m \u001b[33m=\u001b[39m \u001b[32m'RECEIVE_ALL_ALBUMS'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n    at Object._raise (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:766:17)\n    at Object.raiseWithData (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:759:17)\n    at Object.raise (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:753:17)\n    at Object.readString (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:8595:20)\n    at Object.getTokenFromCode (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:8235:14)\n    at Object.getTokenFromCode (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4750:18)\n    at Object.nextToken (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:7762:12)\n    at Object.next (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:7687:10)\n    at Object.eat (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:7692:12)\n    at Object.eatContextual (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:8928:44)\n    at Object.expectContextual (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:8932:15)\n    at Object.parseImport (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:12804:12)\n    at Object.parseStatementContent (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:11531:27)\n    at Object.parseStatement (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:11431:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:12013:25)\n    at Object.parseBlockBody (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:11999:10)\n    at Object.parseTopLevel (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:11362:10)\n    at Object.parse (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:13045:10)\n    at parse (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:13098:38)\n    at parser (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/gensync/index.js:254:32)\n    at gen.next (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/gensync/index.js:266:13)\n    at async.call.value (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/gensync/index.js:216:11)");
+
+/***/ }),
+
 /***/ "./frontend/actions/modal_actions.js":
 /*!*******************************************!*\
   !*** ./frontend/actions/modal_actions.js ***!
@@ -185,6 +196,95 @@ var logout = function logout() {
   return function (dispatch) {
     return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["logout"]().then(function () {
       return dispatch(logoutCurrentUser());
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./frontend/actions/track_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/track_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_ALL_TRACKS, RECEIVE_TRACK, REMOVE_TRACK, receiveAllTracks, receiveTrack, removeTrack, fetchUserTracks, fetchAllTracks, fetchTrack, createTrack, updateTrack, deleteTrack */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_TRACKS", function() { return RECEIVE_ALL_TRACKS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TRACK", function() { return RECEIVE_TRACK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_TRACK", function() { return REMOVE_TRACK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllTracks", function() { return receiveAllTracks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTrack", function() { return receiveTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeTrack", function() { return removeTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUserTracks", function() { return fetchUserTracks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllTracks", function() { return fetchAllTracks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTrack", function() { return fetchTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTrack", function() { return createTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTrack", function() { return updateTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteTrack", function() { return deleteTrack; });
+/* harmony import */ var _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/track_api_util */ "./frontend/util/track_api_util.js");
+
+var RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
+var RECEIVE_TRACK = 'RECEIVE_TRACK';
+var REMOVE_TRACK = 'REMOVE_TRACK';
+var receiveAllTracks = function receiveAllTracks(tracks) {
+  return {
+    type: RECEIVE_ALL_TRACKS,
+    tracks: tracks
+  };
+};
+var receiveTrack = function receiveTrack(track) {
+  return {
+    type: RECEIVE_TRACK,
+    track: track
+  };
+};
+var removeTrack = function removeTrack(trackId) {
+  return {
+    type: REMOVE_TRACK,
+    trackId: trackId
+  };
+};
+var fetchUserTracks = function fetchUserTracks(user_id) {
+  return function (dispatch) {
+    return _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUserTracks"](user_id).then(function (tracks) {
+      return dispatch(receiveAllTracks(tracks));
+    });
+  };
+};
+var fetchAllTracks = function fetchAllTracks() {
+  return function (dispatch) {
+    return _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchAllTracks"]().then(function (tracks) {
+      return dispatch(receiveAllTracks(tracks));
+    });
+  };
+};
+var fetchTrack = function fetchTrack(trackId) {
+  return function (dispatch) {
+    return _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTrack"](trackId).then(function (track) {
+      return dispatch(receiveTrack(track));
+    });
+  };
+};
+var createTrack = function createTrack(track) {
+  return function (dispatch) {
+    return _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__["createTrack"](track).then(function (track) {
+      return dispatch(receiveTrack(track));
+    });
+  };
+};
+var updateTrack = function updateTrack(track) {
+  return function (dispatch) {
+    return _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__["updateTrack"](track).then(function (track) {
+      return dispatch(receiveTrack(track));
+    });
+  };
+};
+var deleteTrack = function deleteTrack(trackId) {
+  return function (dispatch) {
+    return _util_track_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteTrack"](trackId).then(function () {
+      return dispatch(removeTrack(trackId));
     });
   };
 };
@@ -388,20 +488,39 @@ var MainNav = /*#__PURE__*/function (_React$Component) {
       }, "log in"));
     }
   }, {
+    key: "renderMotto",
+    value: function renderMotto() {
+      if (!this.props.currentUser) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "motto"
+        }, "Discover amazing new music and ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: ""
+        }, "directly support"), " the artists who make it.");
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      var mainNav = this.props.currentUser ? 'loggedInNav-left' : 'main-nav-left';
+      var wholeNav = this.props.currentUser ? 'artist-nav' : 'splash-nav';
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: wholeNav
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: mainNav
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/",
         className: "header-link"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "square-logo"
-      }, "\u25B0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "\u25B0"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "logo"
-      }, "foosiccamp")))), this.props.currentUser ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_signed_in_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, "foosiccamp")), this.renderMotto()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "main-nav-right"
+      }, this.props.currentUser ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_signed_in_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
         className: "SignedInNav",
         logout: this.props.logout,
         currentUser: this.props.currentUser
-      }) : this.renderSignedOutNav());
+      }) : this.renderSignedOutNav()));
     }
   }]);
 
@@ -502,19 +621,12 @@ var SignedInNav = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signed-nav-icons"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        className: "newsfeed-icon-link",
-        to: '/newsfeed'
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "newsfeed-img",
-        src: lightning_icon,
-        alt: "newsfeed"
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        className: "collection-icon-link",
+        className: "collection-notificiation-link",
         to: "/user/".concat(this.props.currentUser.id)
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "collection-img",
-        src: heart_icon,
-        alt: "collection"
+        className: "notification-img",
+        src: notification_icon,
+        alt: "notifiction"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "user-container",
         ref: this.container
@@ -929,7 +1041,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         className: "session-header"
       }, "Sign Up"), this.renderErrors(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-form"
-      }, this.renderArtistName(this.props.formType), this.renderEmail(this.props.formType), this.renderUsername(this.props.formType), this.renderLoginEmailUsername(this.props.formType), this.renderPassword(this.props.formType), this.renderGenre(this.props.formType), this.renderLocation(this.props.formType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.renderArtistName(this.props.formType), this.renderEmail(this.props.formType), this.renderUsername(this.props.formType), this.renderLoginEmailUsername(this.props.formType), this.renderPassword(this.props.formType), this.renderLocation(this.props.formType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "session-buttons"
       }, this.props.formType === 'login' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "session-submit",
@@ -1044,6 +1156,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./frontend/reducers/albums_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/albums_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/album_actions */ "./frontend/actions/album_actions.js");
+/* harmony import */ var _actions_album_actions__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_actions_album_actions__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var albumsReducer = function albumsReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var newState = Object.assign({}, oldState);
+
+  switch (action.type) {
+    case _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_ALBUMS"]:
+      newState = action.albums;
+      return newState;
+
+    case _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALBUM"]:
+      newState[action.album.id] = action.album;
+      return newState;
+
+    case _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_ALBUM"]:
+      delete newState[action.albumId];
+      return newState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (albumsReducer);
+
+/***/ }),
+
 /***/ "./frontend/reducers/entities_reducer.js":
 /*!***********************************************!*\
   !*** ./frontend/reducers/entities_reducer.js ***!
@@ -1126,6 +1279,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./session_reducer */ "./frontend/reducers/session_reducer.js");
 /* harmony import */ var _errors_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./errors_reducer */ "./frontend/reducers/errors_reducer.js");
 /* harmony import */ var _modal_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modal_reducer */ "./frontend/reducers/modal_reducer.js");
+/* harmony import */ var _tracks_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tracks_reducer */ "./frontend/reducers/tracks_reducer.js");
+/* harmony import */ var _albums_reducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./albums_reducer */ "./frontend/reducers/albums_reducer.js");
+
+
 
 
 
@@ -1135,7 +1292,9 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
   entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   session: _session_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   errors: _errors_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  modal: _modal_reducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  modal: _modal_reducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+  tracks: _tracks_reducer__WEBPACK_IMPORTED_MODULE_5__["default"],
+  albums: _albums_reducer__WEBPACK_IMPORTED_MODULE_6__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -1210,6 +1369,46 @@ var sessionReducer = function sessionReducer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (sessionReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/tracks_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/tracks_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_track_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/track_actions */ "./frontend/actions/track_actions.js");
+
+
+var tracksReducer = function tracksReducer() {
+  var oldState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(oldState);
+  var newState = Object.assign({}, oldState);
+
+  switch (action.type) {
+    case _actions_track_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ALL_TRACKS"]:
+      newState = action.tracks;
+      return newState;
+
+    case _actions_track_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TRACK"]:
+      newState[action.track.id] = action.track;
+      return newState;
+
+    case _actions_track_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_TRACK"]:
+      delete newState[action.trackId];
+      return newState;
+
+    default:
+      return oldState;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (tracksReducer);
 
 /***/ }),
 
@@ -1369,6 +1568,63 @@ var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/track_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/track_api_util.js ***!
+  \*****************************************/
+/*! exports provided: fetchUserTracks, fetchAllTracks, fetchTrack, createTrack, updateTrack, deleteTrack */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUserTracks", function() { return fetchUserTracks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllTracks", function() { return fetchAllTracks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTrack", function() { return fetchTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTrack", function() { return createTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTrack", function() { return updateTrack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteTrack", function() { return deleteTrack; });
+var fetchUserTracks = function fetchUserTracks(user_id) {
+  return $.ajax({
+    url: "api/users/".concat(user_id, "/tracks")
+  });
+};
+var fetchAllTracks = function fetchAllTracks() {
+  return $.ajax({
+    url: "api/tracks"
+  });
+};
+var fetchTrack = function fetchTrack(trackId) {
+  return $.ajax({
+    url: "api/tracks/".concat(trackId)
+  });
+};
+var createTrack = function createTrack(track) {
+  return $.ajax({
+    method: 'POST',
+    url: "api/users/".concat(track.artist_id, "/tracks/"),
+    data: {
+      track: track
+    }
+  });
+};
+var updateTrack = function updateTrack(track) {
+  return $.ajax({
+    method: 'PATCH',
+    url: "api/tracks/".concat(track.id),
+    data: {
+      track: track
+    }
+  });
+};
+var deleteTrack = function deleteTrack(trackId) {
+  return $.ajax({
+    method: 'DELETE',
+    url: "api/tracks/".concat(trackId)
   });
 };
 

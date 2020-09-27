@@ -3,7 +3,7 @@
     display: flex;
     width: 100%;
     height: 540px;
-    padding-top: 80px;
+    padding-top: 100px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     .newsfeed-inner {
         display: flex;
         flex-direction: row;
-        width: 65%;
+        width: 70%;
         height: 100%;
         justify-content: center;
         padding: 0;
@@ -24,7 +24,7 @@
 
 .newsfeed-left {
     display: flex;
-    width: 70%;
+    width: 80%;
     height: 100%;
     align-items: stretch;
     padding-right: 1px;
@@ -154,7 +154,7 @@
 
     .newsfeed234-tag {
         position: absolute;
-        top: 145px;
+        top: 150px;
         left: 10px;
         color: white;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -188,15 +188,14 @@
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: bolder;
-        -webkit-text-stroke-width: 0.7px;
+        -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: gray;
-
     }
 
     .newsfeed234-tag {
         // display: flex;
         position: absolute;
-        top: 135px;
+        top: 140px;
         left: 10px;
         color: white;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;

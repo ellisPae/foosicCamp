@@ -39,7 +39,7 @@ class SignedInNav extends React.Component {
             <div className="signedin-nav">
                 {/* <ul> */}
                     <div className='signed-nav-icons'>
-                        <li>
+                        {/* <li>
                             <Link className='newsfeed-icon-link' to={'/newsfeed'}>
                                 <img className='newsfeed-img' src={lightning_icon} alt="newsfeed"/>                            
                             </Link>
@@ -48,7 +48,13 @@ class SignedInNav extends React.Component {
                             <Link className='collection-icon-link' to={`/user/${this.props.currentUser.id}`}>
                                 <img className='collection-img' src={heart_icon} alt="collection" />
                             </Link>
+                        </li> */}
+                        <li >
+                            <Link className='collection-notificiation-link' to={`/user/${this.props.currentUser.id}`}>
+                                <img className='notification-img' src={notification_icon} alt="notifiction" />
+                            </Link>
                         </li>
+
                     <li className="user-container" ref={this.container}>
                             <div className="user-icon" onClick={this.handleClick}>
                                 <img className="circle-img" src={user_logo} alt="user-icon"/>
@@ -70,9 +76,9 @@ class SignedInNav extends React.Component {
                                         <div className='dd-items'><li>settings</li></div>
                                         <div className='dd-items'><li>help</li></div>
                                         <div className='dd-items'>
-                                        <li>
-                                            <div className='logout-btn' onClick={() => this.props.logout()}>log out</div>
-                                        </li>
+                                            <li>
+                                                <div className='logout-btn' onClick={() => this.props.logout()}>log out</div>
+                                            </li>
                                         </div>
                                  </ul>
                         </li>

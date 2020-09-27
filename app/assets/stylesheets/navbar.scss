@@ -1,58 +1,73 @@
 
 .header-link {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     font-family: sans-serif;
-    padding-left: 200px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-
+    width: 300px;
+    height: 40px;
+    // padding-left: 100px;
+    // padding-bottom: 20px;
+    // padding-top: 10px;
 }
 
 
 .square-logo {
     color: #1da0c3;
-    font-size: 60px;
+    font-size: 65px;
     display: flex;
     padding: 0px;
     align-items: center;
-    padding: 20px;
+    // padding: 20px;
+    height: 40px;
+    padding-bottom: 10px;
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: lighter;
+    font-size: 23px;
+    font-weight: 500;
     color: black;
-    padding-top: 10px;
 
 }
 
 
 
-nav {
+.splash-nav {
     display: flex;
     font-family: sans-serif;
     position: fixed;
     border-bottom: 1px solid lightgrey;
     background-color: white;
     width: 100%;
-    height: 80px;
-
+    height: 100px;
     justify-content: space-between;
-    position: fixed;
 
     .signedout-nav {
         display: flex;
-        width: 400px;
+        width: 300px;
         justify-content: center;
-        align-items: flex-start;
-        padding: 25px 20px 15px 10px;
+        align-items: baseline;
+        padding: 35px 10px 0px 10px;
     }
 }
 
+
+.artist-nav {
+    display: flex;
+    font-family: sans-serif;
+    position: fixed;
+    border-bottom: 1px solid lightgrey;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+}
+
+
+
+
+
 .signup-link {
-    margin: 10px;
+    line-height: 20px;
     padding: 10px;
     font-weight: 550;
     background-color: transparent;
@@ -63,11 +78,52 @@ nav {
 }
 
 .login-link {
-    margin: 10px;
+    line-height: 20px;
     padding: 10px;
     font-weight: 550;
 
 }
+
 .login-link:hover {
     text-decoration: underline;
+}
+
+
+.motto {
+    font-size: 16px;
+
+    a {
+        color: #408ea3;
+        background: -webkit-linear-gradient(left, #6046FE, #1DA0C3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+
+.main-nav-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 200px;
+    width: 600px;
+    height: 100px;
+    
+}
+
+.loggedInNav-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 200px;
+}
+
+
+.main-nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 100px;
+    align-items: center;
 }

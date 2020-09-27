@@ -30,24 +30,37 @@ class MainNav extends React.Component {
             </div>
         )
     }
-    
+
+    renderMotto() {
+        if (!this.props.currentUser) {
+            return (
+                <div className='motto'>Discover amazing new music and <a href="">directly support</a> the artists who make it.</div>
+            )
+        }
+    }
+
 
     render() {
-        return (
-            <nav>
-                <Link to="/" className="header-link">
-                    <h1>
-                        <div className="square-logo">▰
-                            <div className='logo'>foosiccamp</div>
-                        </div>
-                    </h1>
-                </Link>
+        const mainNav = this.props.currentUser ? 'loggedInNav-left' : 'main-nav-left';
+        const wholeNav = this.props.currentUser ? 'artist-nav' : 'splash-nav';
 
-                {this.props.currentUser ? 
-                    <SignedInNav 
-                        className="SignedInNav" logout={this.props.logout} 
-                        currentUser={this.props.currentUser} /> : 
-                this.renderSignedOutNav()}
+        return (
+            <nav className={wholeNav}>
+                <div className={mainNav}>
+                    <Link to="/" className="header-link">
+                            <div className="square-logo">▰</div>
+                            <div className='logo'>foosiccamp</div>
+                    </Link>
+                    {this.renderMotto()}
+                </div>
+
+                <div className='main-nav-right'>
+                    {this.props.currentUser ? 
+                        <SignedInNav 
+                            className="SignedInNav" logout={this.props.logout} 
+                            currentUser={this.props.currentUser} /> : 
+                    this.renderSignedOutNav()}
+                </div>
             </nav>
         )
     }

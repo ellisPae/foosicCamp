@@ -7,22 +7,14 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :session_token, null: false
       t.string :location, null: false
       t.string :artist_name, null: false
-      t.string :genre, null: false
 
 
       t.timestamps
     end
     add_index :users, :email, unique: true
     add_index :users, :username, unique: true
-    add_index :users, :session_token, uniue: true
+    add_index :users, :session_token, unique: true
   end
 
 end
 
-
-
-# if user is_fan? => artist_name
-# col: also_fan?:boolean
-
-
-# genre_id

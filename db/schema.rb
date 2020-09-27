@@ -36,6 +36,50 @@ ActiveRecord::Schema.define(version: 2020_09_24_220556) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "albums", force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.string "title", null: false
+    t.decimal "price", null: false
+    t.date "release_date"
+    t.text "description"
+    t.text "credits"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_albums_on_artist_id"
+    t.index ["title"], name: "index_albums_on_title"
+  end
+
+  create_table "genre_joins", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.string "genreable_type"
+    t.bigint "genreable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genreable_id", "genreable_type"], name: "index_genre_joins_on_genreable_id_and_genreable_type"
+    t.index ["genreable_type", "genreable_id"], name: "index_genre_joins_on_genreable_type_and_genreable_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category"], name: "index_genres_on_category"
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.integer "artist_id", null: false
+    t.integer "album_id"
+    t.string "title", null: false
+    t.decimal "price", null: false
+    t.date "release_date"
+    t.text "description"
+    t.text "credits"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_tracks_on_artist_id"
+    t.index ["title"], name: "index_tracks_on_title"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "username", null: false
@@ -43,10 +87,10 @@ ActiveRecord::Schema.define(version: 2020_09_24_220556) do
     t.string "session_token", null: false
     t.string "location", null: false
     t.string "artist_name", null: false
-    t.string "genre", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 

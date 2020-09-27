@@ -1,10 +1,24 @@
 class User < ApplicationRecord
 
-    validates :password_digest, :session_token, :artist_name, :location, :genre, presence: true
+    validates :password_digest, :session_token, :artist_name, :location, presence: true
     validates :username, :email, presence: true, uniqueness: true
-    validates :password, length: {minimum: 6, allow_nil: true}
+    validates :password, length: { minimum: 6, allow_nil: true }
 
     before_validation :ensure_session_token
+
+    has_many :genre_joins, :as => :genreable
+
+    has_one :genre,
+        through: :genre_joins,
+        source: :genre
+
+    has_many :tracks,
+        class_name: :Track,
+        foreign_key: :artist_id
+
+    has_many :albums,
+        class_name: :Album,
+        foreign_key: :artist_id,
 
 
     attr_reader :password

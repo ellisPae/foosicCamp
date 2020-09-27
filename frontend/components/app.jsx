@@ -15,6 +15,7 @@ const App = () => (
             <Route exact path='/' component={MainNavContainer} />  
         </header>
         < Newsfeed />
+        
         <Switch>
             {/* <ProtectedRoute exact path="/" component={SplashContainer} */}
             <AuthRoute exact path="/login" component={LogInFormContainer} />

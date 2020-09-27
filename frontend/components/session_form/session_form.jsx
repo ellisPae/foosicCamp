@@ -169,7 +169,7 @@ class SessionForm extends React.Component {
                                 {this.renderUsername(this.props.formType)}
                                 {this.renderLoginEmailUsername(this.props.formType)}
                                 {this.renderPassword(this.props.formType)}
-                                {this.renderGenre(this.props.formType)}
+                                {/* {this.renderGenre(this.props.formType)} */}
                                 {this.renderLocation(this.props.formType)}
                                 <div className="session-buttons">
                                     {this.props.formType === 'login' ?

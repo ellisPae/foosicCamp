@@ -1,8 +1,7 @@
-class CreateTracks < ActiveRecord::Migration[5.2]
+class CreateAlbums < ActiveRecord::Migration[5.2]
   def change
-    create_table :tracks do |t|
+    create_table :albums do |t|
       t.integer :artist_id, null: false
-      t.integer :album_id
       t.string :title, null: false
       t.decimal :price, null: false
       t.date :release_date
@@ -11,7 +10,7 @@ class CreateTracks < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_index :tracks, :artist_id
-    add_index :tracks, :title
+    add_index :albums, :artist_id
+    add_index :albums, :title
   end
 end
