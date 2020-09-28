@@ -1,7 +1,7 @@
 
-export const fetchUserTracks = user_id => {
+export const fetchUserTracks = userId => {
     return $.ajax({
-        url: `api/users/${user_id}/tracks`
+        url: `api/users/${userId}/tracks`
     })
 }
 

@@ -50,7 +50,7 @@ class SignedInNav extends React.Component {
                             </Link>
                         </li> */}
                         <li >
-                            <Link className='collection-notificiation-link' to={`/user/${this.props.currentUser.id}`}>
+                            <Link className='notificiation-link' to={`/user/${this.props.currentUser.id}`}>
                                 <img className='notification-img' src={notification_icon} alt="notifiction" />
                             </Link>
                         </li>
@@ -65,15 +65,18 @@ class SignedInNav extends React.Component {
                                             <div className="dd-items">
                                                 <Link to={`/users/$this.props.currentUser.id`}>
                                                     <div className="dd-username">
-                                                    <p className="username">{this.props.currentUser.username}</p>
-                                                    <p className='view-collection'>view collection</p>
+                                                        <p className="username">{this.props.currentUser.username}</p>
+                                                        <p className='view-collection'>view collection</p>
                                                     </div>
                                                 </Link>
                                             </div>
                                         {/* </li> */}
-                                        <div className='dd-items' id='purchases-dd'><li>purchases</li></div>
+                                        <div className='dd-items' id='edit-dd'><li>edit profile</li></div>
+                                        <div className='dd-items' id='tools-dd'><li>tools</li></div>
+                                        <div className='dd-items'><li>subscription</li></div>
                                         <p className="dd-line">_________________________</p>
-                                        <div className='dd-items'><li>settings</li></div>
+                                        <div className='dd-items' id='settings-dd'><li>settings</li></div>
+                                        <div className='dd-items' id='guide-dd'><li>edit profile</li></div>
                                         <div className='dd-items'><li>help</li></div>
                                         <div className='dd-items'>
                                             <li>
