@@ -1,5 +1,17 @@
+json.set! album.id do
+    json.extract! album, :id, :artist_id, :title, :price, :release_date, :description, :credits, :track_ids
+end
 
-json.extract! album, :id, :artist_id, :title, :price, :release_date, :description, :credits
+
+
+
+
+
+
+
+
+
+
 
 # json.artist do
 #     json.artistName album.artist.username

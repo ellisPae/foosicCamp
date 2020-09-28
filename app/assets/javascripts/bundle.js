@@ -486,10 +486,17 @@ var receiveAllUsers = function receiveAllUsers(users) {
     users: users
   };
 };
-var receiveUser = function receiveUser(user) {
+var receiveUser = function receiveUser(payload) {
+  var user = payload.user,
+      tracks = payload.tracks,
+      albums = payload.albums,
+      genres = payload.genres;
   return {
     type: RECEIVE_USER,
-    user: user
+    user: user,
+    tracks: tracks,
+    albums: albums,
+    genres: genres
   };
 };
 
@@ -511,8 +518,8 @@ var fetchUsers = function fetchUsers() {
 };
 var fetchUser = function fetchUser(userId) {
   return function (dispatch) {
-    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUser"](userId).then(function (user) {
-      return dispatch(receiveUser(user));
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUser"](userId).then(function (payload) {
+      return dispatch(receiveUser(payload));
     }, function (errors) {
       return dispatch(receiveUserErrors(errors));
     });
@@ -1587,8 +1594,7 @@ var User = /*#__PURE__*/function (_React$Component) {
   _createClass(User, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchUser(this.props.userId); // this.props.fetchUserAlbums(this.props.userId);
-      // this.props.fetchUserTracks(this.props.userId);
+      this.props.fetchUser(this.props.userId);
     }
   }, {
     key: "handleClick",
@@ -1713,17 +1719,14 @@ var User = /*#__PURE__*/function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
-/* harmony import */ var _actions_album_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/album_actions */ "./frontend/actions/album_actions.js");
-/* harmony import */ var _actions_track_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/track_actions */ "./frontend/actions/track_actions.js");
-/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user */ "./frontend/components/user/user.jsx");
-
-
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./user */ "./frontend/components/user/user.jsx");
 
 
 
 
 var mSTP = function mSTP(state, ownProps) {
   var userId = ownProps.match.params.userId;
+  debugger;
   return {
     errors: state.errors.users,
     user: state.entities.users[userId],
@@ -1738,17 +1741,11 @@ var mDTP = function mDTP(dispatch) {
   return {
     fetchUser: function fetchUser(userId) {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["fetchUser"])(userId));
-    },
-    fetchUserAlbums: function fetchUserAlbums(userId) {
-      return dispatch(Object(_actions_album_actions__WEBPACK_IMPORTED_MODULE_2__["fetchUserAlbums"])(userId));
-    },
-    fetchUserTracks: function fetchUserTracks(userId) {
-      return dispatch(Object(_actions_track_actions__WEBPACK_IMPORTED_MODULE_3__["fetchUserTracks"])(userId));
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_user__WEBPACK_IMPORTED_MODULE_4__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_user__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
@@ -1850,6 +1847,8 @@ var albumsErrorsReducer = function albumsErrorsReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/album_actions */ "./frontend/actions/album_actions.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/user_actions */ "./frontend/actions/user_actions.js");
+
 
 
 var albumsReducer = function albumsReducer() {
@@ -1870,6 +1869,9 @@ var albumsReducer = function albumsReducer() {
     case _actions_album_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_ALBUM"]:
       delete newState[action.albumId];
       return newState;
+
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_USER"]:
+      return action.albums;
 
     default:
       return oldState;
@@ -1948,6 +1950,8 @@ var errorsReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"]
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_genre_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/genre_actions */ "./frontend/actions/genre_actions.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/user_actions */ "./frontend/actions/user_actions.js");
+
 
 
 var genresReducer = function genresReducer() {
@@ -1964,6 +1968,9 @@ var genresReducer = function genresReducer() {
     case _actions_genre_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_GENRE"]:
       newState[action.genre.id] = action.genre;
       return newState;
+
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_USER"]:
+      return action.genres;
 
     default:
       return oldState;
@@ -2157,6 +2164,8 @@ var tracksErrorsReducer = function tracksErrorsReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_track_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/track_actions */ "./frontend/actions/track_actions.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/user_actions */ "./frontend/actions/user_actions.js");
+
 
 
 var tracksReducer = function tracksReducer() {
@@ -2177,6 +2186,9 @@ var tracksReducer = function tracksReducer() {
     case _actions_track_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_TRACK"]:
       delete newState[action.trackId];
       return newState;
+
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_USER"]:
+      return action.tracks;
 
     default:
       return oldState;

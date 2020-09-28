@@ -1,4 +1,5 @@
 import { RECEIVE_ALL_TRACKS, RECEIVE_TRACK, REMOVE_TRACK } from '../actions/track_actions';
+import { RECEIVE_USER } from '../actions/user_actions';
 
 
 const tracksReducer = (oldState = {}, action ) => {
@@ -15,6 +16,8 @@ const tracksReducer = (oldState = {}, action ) => {
         case REMOVE_TRACK:
             delete newState[action.trackId]
             return newState;
+        case RECEIVE_USER:
+            return action.tracks;
         default:
             return oldState;
     }

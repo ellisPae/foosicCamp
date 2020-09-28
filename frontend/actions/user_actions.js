@@ -12,10 +12,11 @@ export const receiveAllUsers = users => {
     }
 }
 
-export const receiveUser = user => {
+export const receiveUser = payload => {
+    const { user, tracks, albums, genres } = payload;
     return {
         type: RECEIVE_USER,
-        user
+        user, tracks, albums, genres
     }
 }
 
@@ -37,7 +38,7 @@ export const fetchUsers = () => dispatch => {
 
 export const fetchUser = userId => dispatch => {
     return UserApiUtil.fetchUser(userId).then(
-        (user) => dispatch(receiveUser(user)),
+        (payload) => dispatch(receiveUser(payload)),
         (errors) => dispatch(receiveUserErrors(errors))
     )
 }

@@ -8,14 +8,11 @@ class User extends React.Component {
         this.state = { open: false }
         this.container = React.createRef();
         this.handleClick = this.handleClick.bind(this);
-        this.handleClickOutside = this.handleClickOutside.bind(this)
-
+        this.handleClickOutside = this.handleClickOutside.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchUser(this.props.userId);
-        // this.props.fetchUserAlbums(this.props.userId);
-        // this.props.fetchUserTracks(this.props.userId);
     }
 
     handleClick() {

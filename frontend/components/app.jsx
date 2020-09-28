@@ -21,7 +21,7 @@ const App = () => (
         {/* < Newsfeed /> */}
         <Switch>
             <Route exact path='/users/:userId' component={UserContainer} />
-            {/* <ProtectedRoute exact path="/" component={SplashContainer} */}
+            {/* <ProtectedRoute exact path="/" component={MainPageContainer} */}
             <ProtectedRoute exact path="/tracks/new" component={CreateTrackContainer}/>
             <ProtectedRoute exact path="/tracks/edit" component={CreateTrackContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
