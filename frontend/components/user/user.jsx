@@ -32,8 +32,6 @@ class User extends React.Component {
 
 
     renderAlbums() {
-        console.log(this.props.albums)
-        // debugger
         return this.props.albums.map((album, i) => {
             return (
                 <div className='user-albums-grid'>

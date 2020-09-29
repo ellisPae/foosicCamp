@@ -16,8 +16,10 @@ class Track < ApplicationRecord
         through: :genre_joins,
         source: :genre
 
-    # has_one_attached :track
-    # has_one_attached :photo
+        
+
+    has_one_attached :track
+    has_one_attached :photo
 
 
 

@@ -7,11 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+require 'open-uri'
+
 
 User.destroy_all
 user1 = User.create!(email: "ellis.pae@appacademy.com", username: "quest", password: "coolbeans", artist_name: "3pac", location: "NYC")
 user2 = User.create!(email: "eugene.moon@appacademy.com", username: "barista", password: "coolbeans", artist_name: "high fructose", location: "NYC")
-user3 = User.create!(email: "justin.cho@appacademy.com", username: "justinTime", password: "coolbeans", artist_name: "Justin Time", location: "NYC")
+user3 = User.create!(email: "justin.cho@appacademy.com", username: "justinTime", password: "coolbeans", artist_name: "Then Again", location: "Los Angelos, CA")
+user3_pic = open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/ein.jpg')
+user3.pic.attach(io: file, filename: 'thenAgain.jpg')
 
 
 Album.destroy_all

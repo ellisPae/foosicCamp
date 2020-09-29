@@ -21,6 +21,8 @@ class User < ApplicationRecord
         foreign_key: :artist_id
 
 
+    has_one_attached :pic
+
     attr_reader :password
 
 

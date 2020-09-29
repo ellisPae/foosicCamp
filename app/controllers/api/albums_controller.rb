@@ -53,7 +53,7 @@ class Api::AlbumsController < ApplicationController
     private 
 
     def album_params
-        params.require(:album).permit(:artist_id, :title, :price, :release_date, :description, :credits)
+        params.require(:album).permit(:artist_id, :title, :price, :release_date, :description, :credits, :pic, :album)
     end
 
 end

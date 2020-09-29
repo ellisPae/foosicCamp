@@ -1710,8 +1710,6 @@ var User = /*#__PURE__*/function (_React$Component) {
     value: function renderAlbums() {
       var _this2 = this;
 
-      console.log(this.props.albums); // debugger
-
       return this.props.albums.map(function (album, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "user-albums-grid"
