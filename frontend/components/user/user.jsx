@@ -16,9 +16,11 @@ class User extends React.Component {
 
     }
     
-    // componentDidUpdate() {
-    //     this.props.fetchUser(this.props.userId)
-    // }
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.userId !== this.props.userId) {
+            this.props.fetchUser(this.props.userId)
+        }
+    }
 
     handleClick() {
 

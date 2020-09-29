@@ -19,7 +19,6 @@ class Track < ApplicationRecord
         
 
     has_one_attached :track
-    has_one_attached :photo
 
 
 

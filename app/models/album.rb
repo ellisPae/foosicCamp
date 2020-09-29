@@ -17,7 +17,8 @@ class Album < ApplicationRecord
         through: :genre_joins,
         source: :genre
 
-    has_one_attached :album
+    # has_one_attached :album
+    # has_many_attached: tracks
     has_one_attached :pic
 
 

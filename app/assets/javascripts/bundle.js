@@ -1686,10 +1686,14 @@ var User = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchUser(this.props.userId);
-    } // componentDidUpdate() {
-    //     this.props.fetchUser(this.props.userId)
-    // }
-
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.match.params.userId !== this.props.userId) {
+        this.props.fetchUser(this.props.userId);
+      }
+    }
   }, {
     key: "handleClick",
     value: function handleClick() {
