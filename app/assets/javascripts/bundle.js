@@ -1497,9 +1497,133 @@ var mDTP = function mDTP(dispatch) {
   !*** ./frontend/components/tracks/track_form.jsx ***!
   \***************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/ellispae/Documents/aA/fs_project/foosic_camp/frontend/components/tracks/track_form.jsx: Expected corresponding JSX closing tag for <div> (55:89)\n\n\u001b[0m \u001b[90m 53 | \u001b[39m                            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'about-track'\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 54 | \u001b[39m                                \u001b[33m<\u001b[39m\u001b[33mlabel\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'about-track-label'\u001b[39m\u001b[33m>\u001b[39mabout \u001b[36mthis\u001b[39m track\u001b[33m:\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mlabel\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 | \u001b[39m                                \u001b[33m<\u001b[39m\u001b[33mtextarea\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'about-track-text'\u001b[39m value\u001b[33m=\u001b[39m\u001b[32m'optional'\u001b[39m\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtextarea\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 56 | \u001b[39m                                \u001b[33m<\u001b[39m\u001b[33mlabel\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'track-lyrics-label'\u001b[39m\u001b[33m>\u001b[39mlyrics\u001b[33m:\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mlabel\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 57 | \u001b[39m                                \u001b[33m<\u001b[39m\u001b[33mtextarea\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'track-lyrics-text'\u001b[39m value\u001b[33m=\u001b[39m\u001b[32m'optional'\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mtextarea\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 58 | \u001b[39m                                \u001b[33m<\u001b[39m\u001b[33mlabel\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'track-credits-label'\u001b[39m\u001b[33m>\u001b[39mtrack credits\u001b[33m:\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mlabel\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:766:17)\n    at Object.raiseWithData (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:759:17)\n    at Object.raise (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:753:17)\n    at Object.jsxParseElementAt (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4680:16)\n    at Object.jsxParseElementAt (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4648:32)\n    at Object.jsxParseElementAt (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4648:32)\n    at Object.jsxParseElementAt (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4648:32)\n    at Object.jsxParseElementAt (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4648:32)\n    at Object.jsxParseElement (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4706:17)\n    at Object.parseExprAtom (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4713:19)\n    at Object.parseExprSubscripts (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9844:23)\n    at Object.parseUpdate (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9824:21)\n    at Object.parseMaybeUnary (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9813:17)\n    at Object.parseExprOps (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9683:23)\n    at Object.parseMaybeConditional (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9657:23)\n    at Object.parseMaybeAssign (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9620:21)\n    at allowInAnd (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9586:39)\n    at Object.allowInAnd (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:11303:12)\n    at Object.parseMaybeAssignAllowIn (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9586:17)\n    at Object.parseParenAndDistinguishExpression (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:10473:28)\n    at Object.parseExprAtom (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:10177:21)\n    at Object.parseExprAtom (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:4718:20)\n    at Object.parseExprSubscripts (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9844:23)\n    at Object.parseUpdate (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9824:21)\n    at Object.parseMaybeUnary (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9813:17)\n    at Object.parseExprOps (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9683:23)\n    at Object.parseMaybeConditional (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9657:23)\n    at Object.parseMaybeAssign (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9620:21)\n    at Object.parseExpressionBase (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9564:23)\n    at allowInAnd (/Users/ellispae/Documents/aA/fs_project/foosic_camp/node_modules/@babel/parser/lib/index.js:9558:39)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var TrackForm = /*#__PURE__*/function (_React$Component) {
+  _inherits(TrackForm, _React$Component);
+
+  var _super = _createSuper(TrackForm);
+
+  function TrackForm(props) {
+    _classCallCheck(this, TrackForm);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(TrackForm, [{
+    key: "handleSubmit",
+    value: function handleSubmit() {
+      this.props.processForm;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "trackform-outer"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "trackform-inner"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "trackform-inner-left"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tf-l1"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _defineProperty({
+        className: "tf-l2"
+      }, "className", "track-details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "tf-l3"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "trackform-inner-right"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-inputs"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-name"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "track-name-input",
+        type: "text",
+        value: "track name"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-price"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-price-1"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "track pricing:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, "What pricing performs best?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-price-2"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        value: "1.00"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "currency"
+      }, "US Dollars"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "track-price-note"
+      }, "enter zero or more"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "checkbox",
+        name: "let fans pay more if they want"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-price-3"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "paepal"
+      }, "Payments will go to ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, this.props.currentUser.email), " via PaePal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "more-info",
+        href: ""
+      }, "more info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "track-price-4"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: ""
+      }, "description"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about-track"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "about-track-label"
+      }, "about this track:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "about-track-text",
+        value: "optional"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "track-lyrics-label"
+      }, "lyrics:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "track-lyrics-text",
+        value: "optional"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "track-credits-label"
+      }, "track credits:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "track-credits-text",
+        value: "optional"
+      }))), "s")));
+    }
+  }]);
+
+  return TrackForm;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (TrackForm);
 
 /***/ }),
 

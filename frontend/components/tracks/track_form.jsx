@@ -52,11 +52,11 @@ class TrackForm extends React.Component {
                             </div>
                             <div className='about-track'>
                                 <label className='about-track-label'>about this track:</label>
-                                <textarea className='about-track-text' value='optional'/></textarea>
+                                <textarea className='about-track-text' value='optional'></textarea>
                                 <label className='track-lyrics-label'>lyrics:</label>
-                                <textarea className='track-lyrics-text' value='optional' /></textarea>
+                                <textarea className='track-lyrics-text' value='optional'></textarea>
                                 <label className='track-credits-label'>track credits:</label>
-                                <textarea className='track-credits-text' value='optional' /></textarea>
+                                <textarea className='track-credits-text' value='optional'></textarea>
                             </div>
                         </div>s
                     </div>
