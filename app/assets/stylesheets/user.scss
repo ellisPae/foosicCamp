@@ -1,0 +1,184 @@
+.user-outer {
+    display: flex;
+    width: vw;
+    height: vh;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    width: 1000px;
+    height: 1500px;
+    margin: 0 100px 40px;
+    padding: 70px 30px 80px; 
+    
+    
+}
+
+
+.user-profile-1 {
+    width: 100%;
+    height: 100px;
+}
+
+.user-profile-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+
+
+    .user-topbar-container {
+        width: 500px;
+        // border-bottom: 1px solid lightgray;
+        
+
+
+        .user-topbar {
+            width: 350px;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            line-height: 36px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 1px solid lightgray;
+
+            div {
+                padding: 2px;
+                margin: 2px;
+                
+                    a {
+                        padding: 2px;
+                        margin: 2px;
+                    }
+            }
+            
+            a:hover {
+                border-top: 0.7px solid black;
+            }
+
+            a:active {
+                border-top: 0.7px solid black;
+            }
+        }
+    }
+
+}
+
+
+
+.user-profile-3 {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 100%;
+    
+
+    .user-profile-3l {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+
+       .user-albums-grid {
+           width: 33%;
+           height: 25%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           .user-album {
+               font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+               font-size: 14px;
+               font-weight: 500;
+           }
+   
+        } 
+        
+        .user-tracks-grid {
+            width: 33%;
+            height: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .user-track {
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .user-profile-3r {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-start;
+        width: 200px;
+        height: 100%;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+
+        
+        .user-desc {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            .user-show-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 150px;
+                border: 1px solid lightgray;
+                margin-top: 20px;
+                color: gray;
+            }
+
+            .user-show-name {
+                font-size: 17px;
+                font-weight: 550;
+                padding: 2px;
+                margin-top: 10px;
+            }
+
+            .user-show-loc {
+                font-size: 12px;
+                padding: 2px;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 27px;
+                background-color: white;
+                border-radius: 4px;
+                border: 1px solid lightgray;
+                width: 150px;
+                margin-top: 20px;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+}

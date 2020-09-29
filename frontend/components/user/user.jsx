@@ -5,17 +5,23 @@ class User extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { open: false }
+        // this.state = { shown: false }
         this.container = React.createRef();
         this.handleClick = this.handleClick.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchUser(this.props.userId);
+        this.props.fetchUser(this.props.userId)
+
     }
+    
+    // componentDidUpdate() {
+    //     this.props.fetchUser(this.props.userId)
+    // }
 
     handleClick() {
+
         this.setState({ open: !this.state.open })
     }
 
@@ -25,77 +31,84 @@ class User extends React.Component {
     }
 
 
-
-    render() {
-        const ddContainer = this.state.open ? "ddContainer" : "hidden";
-        const dropdownClass = this.state.open ? "dropdown" : "hidden";
-
-        return (
-            <div>
-                <nav className='user-nav'>
-                    <div className='user-nav-left'>
-                        <Link className='nav-homepage-link'to='/'>
-                            <div className='square-logo'></div>
-                            <div className='logo'>foosiccamp</div>
+    renderAlbums() {
+        console.log(this.props.albums)
+        // debugger
+        return this.props.albums.map((album, i) => {
+            return (
+                <div className='user-albums-grid'>
+                    <div className='user-album' key={i}>
+                        <Link to={`/users/${this.props.userId}/albums/${i}`}>
+                            {/* <div>{album.attached_photo}</div> */}
+                                <div>{album.title}</div>
                         </Link>
                     </div>
-                    <div className='user-nav-right'>
-                        <div className='notification-icon'>
-                            <a href=""><img src={notification_icon} alt="notifications"/></a>
-                        </div>
-                        <div className={ddContainer} onClick={this.handleClickOutside}></div>
-                        <ul className={dropdownClass}>
-                            {/* <li> */}
-                            <div className="dd-items">
-                                <Link to={`/users/$this.props.currentUser.id`}>
-                                    <div className="dd-username">
-                                        <p className="username">{this.props.currentUser.username}</p>
-                                        <p className='view-collection'>view collection</p>
-                                    </div>
-                                </Link>
-                            </div>
-                            {/* </li> */}
-                            <div className='dd-items' id='edit-dd'><li>edit profile</li></div>
-                            <div className='dd-items' id='tools-dd'><li>tools</li></div>
-                            <div className='dd-items' id='subscription-dd'><li>subscription</li></div>
-                            <p className="dd-line">_________________________</p>
-                            <div className='dd-items' id='settings-dd'><li>settings</li></div>
-                            <div className='dd-items' id='guide-dd'><li>edit profile</li></div>
-                            <div className='dd-items'><li>help</li></div>
-                            <div className='dd-items'>
-                                <li>
-                                    <div className='logout-btn' onClick={() => this.props.logout()}>log out</div>
-                                </li>
-                            </div>
-                        </ul>
-                        
-                    </div>
-                
-                </nav>
+                </div>
+            )
+        })
+    }
 
-                <div className='user-homepage'>
-                    <div className='user-homepage-left'>
-                        <div className='user-topbar'>
-                            <a href="">music</a>
-                            <a href="">merch</a>
-                            <a href="">community</a>
-                        </div>
-
-                        <div className='user-content'>
+    renderTracks() {
+        return this.props.tracks.map((track, i) => {
+            if (track.album_id === null) {
+                return (
+                    <div className='user-tracks-grid'>
+                        <div className='user-track' key={i}>
+                            <Link to={`/users/${this.props.userId}/tracks/${i}`}>
+                                {/* <div>{track.attached_photo}</div> */}
+                                <div>{track.title}</div>
+                            </Link>
                         </div>
                     </div>
+                )
+            }
+        })
+    }
+    
 
-                    <div className='user-homepage-right'>
-                        <div className='user-profile'></div>
+
+    render() {
+        if (!this.props.user) {
+            return null;
+        }
+
+        return (
+            <div className="user-outer">
+                <div className='user-profile'>
+
+                    <div className="user-profile-1"></div>
+
+                    <div className='user-profile-2'>
+                        <div className="user-topbar-container">
+                            <div className='user-topbar'>
+                                <div className="topbar-music"><a href="">music</a></div>
+                                <div className="topbar-merch"><a href="">merch</a></div>
+                                <div className="topbar-music"><a href="">community</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='user-profile-3'>
+                        <div className="user-profile-3l">
+                            {this.renderAlbums()}
+                            {this.renderTracks()}
+                        </div>
+                        <div className='user-profile-3r'>
+                            <div className='user-desc'>
+                                <div className="user-show-img">artist image</div>
+                                <div className="user-show-name">{this.props.user.artist_name}</div>
+                                <div className="user-show-loc">{this.props.user.location}</div>
+                                <button>Follow</button>
+                            </div>
+                        </div> 
+
                     </div>
 
                 </div>
-
-
             </div>
         )
     }
-
 }
+
 
 export default User;

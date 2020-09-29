@@ -32,7 +32,7 @@ class MainNav extends React.Component {
     }
 
     renderMotto() {
-        if (!this.props.currentUser) {
+        if (!this.props.currentUser && this.props.location.pathname === '/') {
             return (
                 <div className='motto'>Discover amazing new music and <a href="">directly support</a> the artists who make it.</div>
             )
@@ -40,19 +40,47 @@ class MainNav extends React.Component {
     }
 
 
+    // renderSkinnyNav() {
+    //     if (this.props.location.pathname !== '/login' || this.props.location.pathname !== '/signup') {
+    //         return ""
+    //     } else {
+    //         return "hidden"
+    //     }
+
+    // }
+
+    // renderAdd() {
+    //     if (this.props.match.params.userId === this.props.currentUser.id) {
+    //         return (
+
+    //         )
+    //     }
+    // }
+
+
+
+
     render() {
         const mainNav = this.props.currentUser ? 'loggedInNav-left' : 'main-nav-left';
-        const wholeNav = this.props.currentUser ? 'artist-nav' : 'splash-nav';
+        const wholeNav = this.props.currentUser ? 'artist-nav' : this.props.location.pathname === '/' ? 'splash-nav' : 'artist-nav';
+
+        if (this.props.location.pathname === '/login' || this.props.location.pathname === '/signup') {
+            return null;
+        }
+
 
         return (
             <nav className={wholeNav}>
+                
                 <div className={mainNav}>
                     <Link to="/" className="header-link">
                             <div className="square-logo">▰</div>
                             <div className='logo'>foosiccamp</div>
+                        {/* {this.renderMotto()} */}
                     </Link>
                     {this.renderMotto()}
                 </div>
+
 
                 <div className='main-nav-right'>
                     {this.props.currentUser ? 

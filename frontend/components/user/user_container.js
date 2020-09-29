@@ -7,9 +7,8 @@ import User from './user';
 
 
 const mSTP = (state, ownProps) => {
-    let userId = ownProps.match.params.userId
-    debugger
-
+    let userId = ownProps.match.params.userId;
+    // debugger
     return {
         errors: state.errors.users,
         user: state.entities.users[userId],
