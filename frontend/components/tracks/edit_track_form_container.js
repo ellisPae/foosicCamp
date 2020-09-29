@@ -1,6 +1,6 @@
 import { connect}  from 'react-redux';
+import { fetchUser } from '../../actions/user_actions'
 import { updateTrack } from '../../actions/track_actions';
-import { fetchUserAlbums } from '../../actions/album_actions';
 import TrackForm from './track_form';
 
 
@@ -8,8 +8,10 @@ const mSTP = (state, ownProps) => {
     let userId = ownProps.match.params.userId;
 
     return {
+        errors: state.errors.tracks,
         track: state.track,
         formType: 'Edit Track',
+        currentUser: state.entities.users[state.session.id],
         userId
     }
 }
@@ -18,8 +20,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        processForm: track => dispatch(updateTrack(track)),
-        fetchUserAlbums: userId => dispatch(fetchUserAlbums(userId))
+        fetchUser: userId => dispatch(fetchUser(userId)),
+        processForm: track => dispatch(updateTrack(track))
     }
 }
 

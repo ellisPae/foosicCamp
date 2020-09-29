@@ -10,15 +10,16 @@ const mSTP = (state, ownProps) => {
     return {
         track: {
             artist_id: userId,
-            // album_id: null,
-            // how would I extract the album_id
+            album_id: "",
             title: "",
             price: "",
             release_date: "",
             description: "",
             credits: ""
         },
+        errors: state.errors.tracks,
         formType: 'Create Track',
+        currentUser: state.entities.users[state.session.id],
         userId
     }
 }
