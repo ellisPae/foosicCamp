@@ -1,4 +1,11 @@
 
+// export const fetchTrackArtist = track => {
+//     return $.ajax({
+//         url: `/api/users/${track.artist_id}`
+//     })
+// }
+
+
 export const fetchUserTracks = userId => {
     return $.ajax({
         url: `api/users/${userId}/tracks`

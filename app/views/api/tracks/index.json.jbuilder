@@ -1,18 +1,11 @@
 
 json.array! @tracks do |track|
-  json.partial! 'api/tracks/track', track: track
+  json.set! track.id do 
+    json.partial! 'api/tracks/track', track: track
+  end
 end
 
 
 
-# json.array! @tracks do |track|
-#   if @album_id
-#     json.partial! 'api/tracks/track', track: track
-#   else
-#     if track.photo.attached?
-#       json.partial! 'api/tracks/track', track: track
-#       json.photoUrl url_for(track.photo)
-#     end
-#   end
-# end
+
 

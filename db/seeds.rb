@@ -76,7 +76,7 @@ user1_track7.track.attach(io: user1_track7_song, filename: 'whenImWith.wav')
 # User 1 Album 2 Tracks
 user1_track8 = Track.create!(artist_id: user1.id, album_id: user1_album2.id, title: "As Ever", price: 1.00)
 user1_track8_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/As+Ever+(Mastered).wav')
-user1_track8.track.attach(io: user8_track8_song, filename: 'asEver.wav')
+user1_track8.track.attach(io: user1_track8_song, filename: 'asEver.wav')
 
 user1_track9 = Track.create!(artist_id: user1.id, album_id: user1_album2.id, title: "Bright Lights", price: 1.50)
 user1_track9_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/Bright+Lights+(Mastered).wav')
@@ -138,7 +138,7 @@ user1_track21.track.attach(io: user1_track21_song, filename: 'whenImWith.wav')
 # User 2 Albums:
 user2_album1 = Album.create!(artist_id: user2.id, title: "Caffeine Deficit", price: 11.00)
 user2_album1_pic = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/album5.jpg')
-user2_album1.pic.attach(io: user1_album1_pic, filename: 'user2album1.jpg')
+user2_album1.pic.attach(io: user2_album1_pic, filename: 'user2album1.jpg')
 
 user2_album2 = Album.create!(artist_id: user2.id, title: "Caffeine Overload", price: 14.00)
 user2_album2_pic = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/album7.jpg')
@@ -150,7 +150,7 @@ user2_album3.pic.attach(io: user2_album3_pic, filename: 'user2album3.jpg')
 
 
 # User 2 Album 1 Tracks:
-user2_track1 = Track.create!(artist_id: user1.id, album_id: user2_album1.id, title: "As Ever", price: 1.00)
+user2_track1 = Track.create!(artist_id: user2.id, album_id: user2_album1.id, title: "As Ever", price: 1.00)
 user2_track1_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/As+Ever+(Mastered).wav')
 user2_track1.track.attach(io: user2_track1_song, filename: 'asEver.wav')
 
@@ -181,7 +181,7 @@ user2_track7.track.attach(io: user2_track7_song, filename: 'whenImWith.wav')
 # User 2 Album 2 Tracks
 user2_track8 = Track.create!(artist_id: user2.id, album_id: user2_album2.id, title: "As Ever", price: 1.00)
 user2_track8_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/As+Ever+(Mastered).wav')
-user2_track8.track.attach(io: user8_track8_song, filename: 'asEver.wav')
+user2_track8.track.attach(io: user2_track8_song, filename: 'asEver.wav')
 
 user2_track9 = Track.create!(artist_id: user2.id, album_id: user2_album2.id, title: "Bright Lights", price: 1.50)
 user2_track9_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/Bright+Lights+(Mastered).wav')
@@ -241,7 +241,7 @@ user2_track21.track.attach(io: user2_track21_song, filename: 'whenImWith.wav')
 # User 3 Albums
 user3_album1 = Album.create!(artist_id: user3.id, title: "Florence Place", price: 15.00)
 user3_album1_pic = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/florence_cloud.png')
-user3_album1.pic.attach(io: user3_album1_pic, filename: 'user3album3.jpg')
+user3_album1.pic.attach(io: user3_album1_pic, filename: 'user3album1.jpg')
 
 user3_album2 = Album.create!(artist_id: user3.id, title: "False Romance", price: 20.00)
 user3_album2_pic = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/banksy_donuts.jpg')
@@ -249,13 +249,13 @@ user3_album2.pic.attach(io: user3_album2_pic, filename: 'user3album2.jpg')
 
 user3_album3 = Album.create!(artist_id: user3.id, title: "sun.set! blvd", price: 20.00)
 user3_album3_pic = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/album3.jpg')
-user3_album3.pic.attach(io: user3_album3_pic, filename: 'user3album2.jpg')
+user3_album3.pic.attach(io: user3_album3_pic, filename: 'user3album3.jpg')
 
 
 # User 3 Album 1 Tracks:
-user3_track1 = Track.create!(artist_id: user1.id, album_id: user3_album1.id, title: "As Ever", price: 1.00)
+user3_track1 = Track.create!(artist_id: user3.id, album_id: user3_album1.id, title: "As Ever", price: 1.00)
 user3_track1_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/As+Ever+(Mastered).wav')
-user3_track1.track.attach(io: user1_track1_song, filename: 'asEver.wav')
+user3_track1.track.attach(io: user3_track1_song, filename: 'asEver.wav')
 
 user3_track2 = Track.create!(artist_id: user3.id, album_id: user3_album1.id, title: "Bright Lights", price: 1.50)
 user3_track2_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/Bright+Lights+(Mastered).wav')
@@ -284,7 +284,7 @@ user3_track7.track.attach(io: user3_track7_song, filename: 'whenImWith.wav')
 # User 3 Album 2 Tracks
 user3_track8 = Track.create!(artist_id: user3.id, album_id: user3_album2.id, title: "As Ever", price: 1.00)
 user3_track8_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/As+Ever+(Mastered).wav')
-user3_track8.track.attach(io: user8_track8_song, filename: 'asEver.wav')
+user3_track8.track.attach(io: user3_track8_song, filename: 'asEver.wav')
 
 user3_track9 = Track.create!(artist_id: user3.id, album_id: user3_album2.id, title: "Bright Lights", price: 1.50)
 user3_track9_song = URI.open('https://foosiccamp-seeds.s3.amazonaws.com/justin_cho_music/Bright+Lights+(Mastered).wav')

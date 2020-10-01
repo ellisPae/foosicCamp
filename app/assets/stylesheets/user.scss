@@ -63,11 +63,11 @@
             }
             
             a:hover {
-                border-top: 0.7px solid black;
+                text-decoration: overline;
             }
 
             a:active {
-                border-top: 0.7px solid black;
+                text-decoration: overline;
             }
         }
     }
@@ -94,31 +94,83 @@
 
        .user-albums-grid {
            width: 33%;
-           height: 25%;
+           height: 23%;
            display: flex;
            justify-content: center;
            align-items: center;
 
            .user-album {
+               display: flex;
                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-               font-size: 14px;
-               font-weight: 500;
+               font-size: 15px;
+               font-weight: bold;
+               justify-content: center;
+               align-items: flex-start;
+               width: 100%;
+               height: 80%;
+
+               .album-title {
+                   display: flex;
+                   justify-content: center;
+                   overflow-x: hidden;
+                   text-overflow: ellipsis;
+               }
+
+                .album-pic {
+                    display: flex;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+
+                    img {
+                        height: 250px;
+                        width: 250px;
+                        padding-bottom: 7px;
+                    }
+                }
            }
    
         } 
         
         .user-tracks-grid {
-            width: 33%;
+            width: 30%;
             height: 25%;
             display: flex;
             justify-content: center;
             align-items: center;
 
             .user-track {
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                font-size: 14px;
-                font-weight: 500;
+               display: flex;
+               font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+               font-size: 15px;
+               font-weight: bold;
+               justify-content: center;
+               align-items: flex-start;
+               width: 100%;
+               height: 80%;
+
+
+                .track-title {
+                   display: flex;
+                   justify-content: center;
+                   overflow-x: hidden;
+                   text-overflow: ellipsis;
+                }
+
+                .track-pic {
+                   display: flex;
+                   justify-content: center;
+                   overflow-x: hidden;
+                   text-overflow: ellipsis;
+                    
+                   img {
+                        height: 250px;
+                        width: 250px;
+                        padding-bottom: 7px;
+                    }
+                }
             }
+
         }
     }
 
@@ -126,7 +178,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-start;
+        justify-content: flex-start;
         width: 200px;
         height: 100%;
         border: 1px solid lightgray;
@@ -147,6 +199,12 @@
                 border: 1px solid lightgray;
                 margin-top: 20px;
                 color: gray;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
             }
 
             .user-show-name {

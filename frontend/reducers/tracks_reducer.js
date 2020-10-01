@@ -11,13 +11,12 @@ const tracksReducer = (oldState = {}, action ) => {
             newState = action.tracks
             return newState
         case RECEIVE_TRACK:
-            newState[action.track.id] = action.track
-            return newState
+           return Object.assign({}, oldState, action.track)
         case REMOVE_TRACK:
             delete newState[action.trackId]
             return newState;
-        case RECEIVE_USER:
-            return action.tracks;
+        // case RECEIVE_USER:
+        //     return action.tracks;
         default:
             return oldState;
     }

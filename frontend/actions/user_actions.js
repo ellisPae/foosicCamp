@@ -14,12 +14,13 @@ export const receiveAllUsers = users => {
 
 export const receiveUser = payload => {
     const { user, tracks, albums, genres } = payload;
-    
+    debugger
     return {
         type: RECEIVE_USER,
         user, tracks, albums, genres
     }
 }
+// artist has tracks albums genres
 
 const receiveUserErrors = errors => {
     return {

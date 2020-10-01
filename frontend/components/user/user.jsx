@@ -23,7 +23,6 @@ class User extends React.Component {
     }
 
     handleClick() {
-
         this.setState({ open: !this.state.open })
     }
 
@@ -36,11 +35,11 @@ class User extends React.Component {
     renderAlbums() {
         return this.props.albums.map((album, i) => {
             return (
-                <div className='user-albums-grid'>
-                    <div className='user-album' key={i}>
-                        <Link to={`/users/${this.props.userId}/albums/${i}`}>
-                            {/* <div>{album.attached_photo}</div> */}
-                                <div>{album.title}</div>
+                <div className='user-albums-grid' key={i}>
+                    <div className='user-album'>
+                        <Link to={`/albums/${album.id}`}>
+                            <div className='album-pic'><img src={album.picUrl}/></div>
+                            <div className='album-title'>{album.title}</div>
                         </Link>
                     </div>
                 </div>
@@ -49,14 +48,16 @@ class User extends React.Component {
     }
 
     renderTracks() {
+        // debugger
         return this.props.tracks.map((track, i) => {
             if (track.album_id === null) {
                 return (
-                    <div className='user-tracks-grid'>
-                        <div className='user-track' key={i}>
-                            <Link to={`/users/${this.props.userId}/tracks/${i}`}>
-                                {/* <div>{track.attached_photo}</div> */}
-                                <div>{track.title}</div>
+                    <div className='user-tracks-grid' key={i}>
+                        <div className='user-track'>
+                            <Link to={`/tracks/${tracks.id}`}>
+                                <div className='track-pic'><img src={track.album_id ? albums[track.album_id].picUrl : null}/></div>
+                                {/* <div className='track-pic'><img src={track.picUrl} /></div> */}
+                                <div className='track-title'>{track.title}</div>
                             </Link>
                         </div>
                     </div>
@@ -95,7 +96,7 @@ class User extends React.Component {
                         </div>
                         <div className='user-profile-3r'>
                             <div className='user-desc'>
-                                <div className="user-show-img">artist image</div>
+        <                   div className="user-show-img"><img src={this.props.user.picUrl}/></div>
                                 <div className="user-show-name">{this.props.user.artist_name}</div>
                                 <div className="user-show-loc">{this.props.user.location}</div>
                                 <button>Follow</button>

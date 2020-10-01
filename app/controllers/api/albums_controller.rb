@@ -8,7 +8,7 @@ class Api::AlbumsController < ApplicationController
     end
 
     def show
-        @album = album.find(params[:id])
+        @album = Album.find(params[:id])
         render "api/albums/show"
     end
 
@@ -26,7 +26,7 @@ class Api::AlbumsController < ApplicationController
 
 
    def edit
-        @album = album.find(params[:id])
+        @album = Album.find(params[:id])
         render "api/albums/edit"
     end
 
@@ -44,7 +44,7 @@ class Api::AlbumsController < ApplicationController
 
 
     def destroy
-        @album = current_user.albums.find_by(id: params[:id])
+        @album = current_user.Albums.find_by(id: params[:id])
         @album.delete if @album && @album.artist_id == current_user.id
         render "api/users/show"
     end

@@ -1,4 +1,5 @@
 import * as TrackApiUtil from '../util/track_api_util';
+import { RECEIVE_USER } from './user_actions';
 
 
 export const RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
@@ -14,10 +15,14 @@ export const receiveAllTracks = tracks => {
     };
 };
 
-export const receiveTrack = track => {
+export const receiveTrack = payload => {
+    const { track, album, artist, } = payload;
+
     return {
         type: RECEIVE_TRACK,
-        track
+        track,
+        album,
+        artist
     };
 };
 
@@ -36,6 +41,13 @@ export const receiveTrackErrors = errors => {
 };
 
 
+// export const fetchTrackArtist = track => dispatch => {
+//     return (
+//         TrackApiUtil.fetchTrackArtist(track).then(
+//             (user) => dispatch({TYPE: RECEIVE_USER, user}),
+//             (errors) => dispatchTrackErrors(errors))
+//     )
+// }
 
 
 export const fetchUserTracks = userId => dispatch => {
@@ -60,7 +72,7 @@ export const fetchAllTracks = () => dispatch => {
 export const fetchTrack = trackId => dispatch => {
     return (
         TrackApiUtil.fetchTrack(trackId).then(
-            (track) => dispatch(receiveTrack(track)),
+            (payload) => dispatch(receiveTrack(payload)),
             (errors) => dispatch(receiveTrackErrors(errors))
         )
     );
