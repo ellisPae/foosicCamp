@@ -16,13 +16,11 @@ export const receiveAllTracks = tracks => {
 };
 
 export const receiveTrack = payload => {
-    const { track, album, artist, } = payload;
 
+    const { track, artistAlbums, artist, genres } = payload;
     return {
         type: RECEIVE_TRACK,
-        track,
-        album,
-        artist
+        track, artistAlbums, artist, genres
     };
 };
 

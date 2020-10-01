@@ -1,3 +1,5 @@
+import { RECEIVE_USER } from '../actions/user_actions';
+import { RECEIVE_TRACK } from '../actions/track_actions';
 import { RECEIVE_ALBUM_ERRORS, RECEIVE_ALL_ALBUMS, RECEIVE_ALBUM, REMOVE_ALBUM } from './../actions/album_actions';
 
 
@@ -16,7 +18,7 @@ const albumsErrorsReducer = (errors = _defaultErrors, action) => {
         case REMOVE_ALBUM:
             return [];
         default:
-            return errors
+            return errors;
     }
 }
 

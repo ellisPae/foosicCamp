@@ -33,6 +33,7 @@ class User extends React.Component {
 
 
     renderAlbums() {
+        
         return this.props.albums.map((album, i) => {
             return (
                 <div className='user-albums-grid' key={i}>
@@ -48,7 +49,7 @@ class User extends React.Component {
     }
 
     renderTracks() {
-        // debugger
+
         return this.props.tracks.map((track, i) => {
             if (track.album_id === null) {
                 return (

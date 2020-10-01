@@ -13,7 +13,6 @@ const albumsReducer = (oldState = {}, action) => {
             return newState
         case RECEIVE_ALBUM:
             newState[action.album.id] = action.album
-            // receive payload
             return newState
         case REMOVE_ALBUM:
             delete newState[action.albumId]
@@ -21,7 +20,7 @@ const albumsReducer = (oldState = {}, action) => {
         case RECEIVE_USER:
             return action.albums;
         case RECEIVE_TRACK:
-            return Object.assign({}, oldState, action.album)
+            return action.artistAlbums;
         default:
             return oldState;
     }

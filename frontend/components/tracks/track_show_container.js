@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 import { fetchTrack } from '../../actions/track_actions';
 import { setTrack, playTrack, pauseTrack }  from '../../actions/audioplayer_actions';
 import TrackShow from './track_show';
+import { fetchUserAlbums } from '../../util/album_api_util';
 
 
 const mSTP = (state, ownProps) => {
+    
     let trackId = ownProps.match.params.trackId;
     const track = state.entities.tracks[trackId];
     const artist = track ? state.entities.users[track.artist_id] : "";
     const album = track ? state.entities.albums[track.album_id] : "";
-    const artistAlbums = track ? state.entities.users[track.artist_id].albums : "";
+    let artistAlbums = track ? state.entities.albums : {};
 
-
+    debugger
     return {
         track: track,
         artist: artist,

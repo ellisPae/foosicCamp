@@ -1,0 +1,324 @@
+.outer-album-container {
+    display: flex;
+    width: vw;
+    height: vh;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #c7c6c3;
+
+
+    .inner-album-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 150px;
+        width: 1000px;
+        height: 1500px;
+        margin: 0 100px 40px;
+        padding: 70px 30px 80px;
+        background-color: #d9d9d9;
+    }
+
+
+}
+
+
+.album-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+
+
+    .banner {
+        display: flex;
+        width: 1060px;
+        height: 180px;
+        background-image: linear-gradient(to right, #97a2a4, #88959a, #607884, #4f6676, #344f64);
+    }
+
+    .album-topbar {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        background-color: #a6a6a5;
+
+        .topbar-menu {
+            width: 350px;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            line-height: 36px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 1px solid lightgray;
+
+            a:hover {
+                text-decoration: overline;
+            }
+
+            a:active {
+                text-decoration: overline;
+            }
+        }
+
+    }
+}
+
+.albumbox-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+
+    .albumbox-inner-l {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 80%;
+        height: 100%;
+        padding: 20px;
+
+
+        .albumbox-inner-l1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 50%;
+            padding: 10px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+
+            .album-show-album-img {
+                display: flex;
+                height: 350px;
+                width: 350px;
+                border: 1px solid black;
+                border-radius: 5px;
+
+                img {
+                    height: 350px;
+                    width: 350px;
+                }
+            }
+
+            .share-wishlist {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                width: 90%;
+                height: 30px;
+                padding: 10px 5px 5px 5px;
+                font-size: 13px;
+                font-weight: bolder;
+                color: blue;
+
+
+                .heart-box {
+                    display: flex;
+                    width: 40%;
+                    justify-content: flex-start;
+
+
+                    .heart {
+                        display: flex;
+                        height: 15px;
+                        width: 15px;
+                        padding-right: 7px;
+                    }
+                }
+
+                .share-box {
+                    display: flex;
+                    width: 40%;
+                    justify-content: flex-start;
+
+                    .share {
+                        display: flex;
+                        height: 15px;
+                        width: 15px;
+                        padding-right: 7px;
+                    }
+                }
+
+            }
+
+
+            .supported-by {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .albumbox-inner-l2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 50%;
+        padding: 10px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+        .album-show-player {
+
+            h2 {
+                padding: 10px 10px 10px 0;
+            }
+
+            h5 {
+                padding: 0 0 30px 0;
+                margin: 0;
+            }
+        }
+
+    }
+
+
+
+    .albumbox-inner-r {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        height: 100%;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding: 30px 20px 20px 20px;
+
+        .album-artist-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            // padding: 10px;
+
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: center;
+            .shit {
+                display: flex;
+                flex-direction: column;
+                width: 160px;
+                padding-top: 5px;
+
+                .artist-name {
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 3px;
+
+                }
+
+                .artist-loc {
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 100%;
+                    font-size: 11px;
+                    padding: 3px;
+
+                }
+
+            }
+
+
+            img {
+                display: flex;
+                height: 150px;
+                width: 150px;
+                border: 1px solid black;
+                border-radius: 5px;
+                // padding: 10px;
+
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 27px;
+                background-color: white;
+                border-radius: 4px;
+                border: 1px solid lightgray;
+                width: 150px;
+                height: 30px;
+                margin-top: 20px;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+
+
+            .discography {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                width: 100%;
+                height: 50%;
+                justify-content: space-around;
+
+
+
+                .disco1 {
+                    display: flex;
+                    width: 160px;
+
+                    .disco2 {
+                        display: flex;
+                        justify-content: flex-start;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+.discography-grid {
+
+    .album-disco-album-title {
+        font-size: 12px;
+        color: blue;
+        padding-top: 5px;
+    }
+
+    .album-disco-album-title:hover {
+        text-decoration: underline;
+    }
+
+    .album-disco-album-date {
+        font-size: 10px;
+    }
+}

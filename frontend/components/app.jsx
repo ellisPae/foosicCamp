@@ -12,6 +12,7 @@ import EditTrackContainer from './tracks/edit_track_form_container';
 import Newsfeed from './main/splash_newsfeed';
 import UserContainer from './user/user_container';
 import TrackShowContainer from './tracks/track_show_container';
+import AlbumShowContainer from './albums/album_show_container';
 
 
 const App = () => (
@@ -28,6 +29,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route path='/users/:userId' component={UserContainer} />
             <Route exact path='/tracks/:trackId' component={TrackShowContainer} />
+            <Route exact path='/albums/:albumId' component={AlbumShowContainer} />
         </Switch>
     </div>
 );

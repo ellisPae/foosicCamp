@@ -15,10 +15,12 @@ export const receiveAllAlbums = albums => {
 }
 
 
-export const receiveAlbum = album => {
+export const receiveAlbum = payload => {
+    const { album, artist, tracks, genres } = payload;
+
     return {
         type: RECEIVE_ALBUM,
-        album
+        album, artist, tracks, genres
     }
 }
 
@@ -60,7 +62,7 @@ export const fetchAllAlbums = () => dispatch => {
 export const fetchAlbum = albumId => dispatch => {
     return (
         AlbumApiUtil.fetchAlbum(albumId).then(
-            (album) => dispatch(receiveAlbum(album)),
+            (payload) => dispatch(receiveAlbum(payload)),
             (errors) => dispatch(receiveAlbumErrors(errors))
         )
     )
