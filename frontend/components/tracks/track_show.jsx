@@ -14,11 +14,11 @@ class TrackShow extends React.Component {
  
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.match.params.trackId !== this.props.trackId) {
-            this.props.fetchTrack(this.props.trackId)
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.match.params.trackId !== this.props.trackId) {
+    //         this.props.fetchTrack(this.props.trackId)
+    //     }
+    // }
 
 
     renderDiscography() {
@@ -29,7 +29,7 @@ class TrackShow extends React.Component {
         return this.props.artistAlbums.map((album, i) => {
             return (
                 <div className='discography-grid' key={i}>
-                    <Link to={`/api/albums/${album.id}`}>
+                    <Link to={`/albums/${album.id}`}>
                         <img src={album.picUrl}/>
                         <p className='track-disco-album-title'>{album.title}</p>
                         <p className='track-disco-album-date'>{album.release_date}</p>
@@ -56,7 +56,7 @@ class TrackShow extends React.Component {
     }
 
     render() {
-        debugger
+ 
         if (!this.props.track) {
             return null;
         }
@@ -95,16 +95,16 @@ class TrackShow extends React.Component {
                                 </div>
                                 <div className='trackbox-inner-l2'>
                                     <div className='track-show-player'>
-                                        <div className='track-show-title'><h2>{this.props.track.title}</h2></div>
-                                        <div className='track-show-by'><h5>by {this.props.artist.artist_name}</h5></div>
-                                        <AudioPlayer track={this.props.track}/>
+                                        {/* <div className='track-show-title'><h2>{this.props.track.title}</h2></div>
+                                        <div className='track-show-by'><h5>by {this.props.artist.artist_name}</h5></div> */}
+                                        <AudioPlayer track={this.props.track} artist={this.props.artist}/>
                                         <div className='other-content'></div>
                                     </div>
                                 </div>
                             </div>
                             <div className='trackbox-inner-r'>
                                 <div className='track-artist-info'>
-                                    <div className='artist-pic'><img src={this.props.artist.picUrl}/></div>
+                                    <div className='artist-pic'><Link to={`/users/${this.props.artist.id}`}><img src={this.props.artist.picUrl} /></Link></div>
                                     <div className='shit'>
                                         <div className='artist-name'><p className='name'>{this.props.artist.artist_name}</p></div>
                                         <div className='artist-loc'><p className='loc'>{this.props.artist.location}</p></div>

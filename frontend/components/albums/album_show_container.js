@@ -7,16 +7,17 @@ import AlbumShow from './album_show';
 
 const mSTP = (state, ownProps) => {
     let albumId = ownProps.match.params.albumId;
-    // const tracks = album ? state.entities.tracks[albumId]: "";
-    // const artist = album ? state.entities.users[album.artist_id] : "";
-    // const artistAlbums = track ? state.entities.users[album.artist_id].albums : "";
-
-
+    const album = state.entities.albums[albumId];
+    const artist = album ? state.entities.users : "";
+    const tracks = album ? album.tracks : "";
+    const artistAlbums = artist ? artist.albums : "";
+    
+   
     return {
-        album: state.entites.albums[albumId],
-        tracks: Object.values(album),
-        artist: state.entities.artist,
+        album: album,
         artistAlbums: Object.values(artistAlbums),
+        artist: artist,
+        tracks: Object.values(tracks),
         isPlaying: state.ui.audioPlayer.isPlaying,
         albumId
     }

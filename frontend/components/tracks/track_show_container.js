@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
     const album = track ? state.entities.albums[track.album_id] : "";
     let artistAlbums = track ? state.entities.albums : {};
 
-    debugger
+    
     return {
         track: track,
         artist: artist,

@@ -5,7 +5,7 @@ export const RECEIVE_ALL_ALBUMS = 'RECEIVE_ALL_ALBUMS';
 export const RECEIVE_ALBUM = 'RECEIVE_ALBUM';
 export const REMOVE_ALBUM = 'REMOVE_ALBUM';
 export const RECEIVE_ALBUM_ERRORS = 'RECEIVE_ALBUM_ERRORS'
-
+export const CLEAR_ALBUMS = 'CLEAR_ALBUMS';
 
 export const receiveAllAlbums = albums => {
     return {
@@ -38,6 +38,12 @@ export const receiveAlbumErrors = errors => {
     }
 }
 
+export const clearAlbums = () => {
+    return {
+        type: CLEAR_ALBUMS
+    }
+}
+
 
 
 export const fetchUserAlbums = userId => dispatch => {
@@ -51,7 +57,7 @@ export const fetchUserAlbums = userId => dispatch => {
 
 export const fetchAllAlbums = () => dispatch => {
     return (
-        TrackApiUtil.fetchAllAlbums().then(
+        AlbumApiUtil.fetchAllAlbums().then(
             (albums) => dispatch(receiveAllAlbums(albums)),
             (errors) => dispatch(receiveAlbumErrors(errors))
         )

@@ -20,7 +20,7 @@ const tracksReducer = (oldState = {}, action ) => {
         case RECEIVE_USER:
             return action.tracks;
         case RECEIVE_ALBUM:
-            return Object.assign({}, oldState, action.album)
+            return action.album.tracks;
         default:
             return oldState;
     }

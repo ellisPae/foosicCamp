@@ -68,7 +68,6 @@ class MainNav extends React.Component {
             return null;
         }
 
-
         return (
             <nav className={wholeNav}>
                 

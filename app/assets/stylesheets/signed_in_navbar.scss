@@ -9,6 +9,9 @@
     padding: 15 0 0 0;
     justify-content: space-around;
     box-sizing: content-box;
+    z-index: 10000;
+    position: sticky;
+    top: 0;
 }   
 
 .signed-nav-icons {

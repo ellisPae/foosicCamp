@@ -13,7 +13,7 @@ export const fetchAllAlbums = () => {
 
 export const fetchAlbum = albumId => {
     return $.ajax({
-        url: `api/users/albums/${albumId}`
+        url: `api/albums/${albumId}`
     })
 }
 

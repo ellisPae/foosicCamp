@@ -5,24 +5,22 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-// import SplashContainer from './splash/splash_container';
 import MainNavContainer from './navbar/usernav_container';
 import CreateTrackContainer from './tracks/create_track_form_container';
 import EditTrackContainer from './tracks/edit_track_form_container';
-import Newsfeed from './main/splash_newsfeed';
 import UserContainer from './user/user_container';
 import TrackShowContainer from './tracks/track_show_container';
 import AlbumShowContainer from './albums/album_show_container';
+import MainPageContainer from './main/main_container'
 
 
 const App = () => (
     <div>
         <header>
-            <Route path='/' component={MainNavContainer} />  
         </header>
-        {/* < Newsfeed /> */}
+            <Route path='/' component={MainNavContainer} />
         <Switch>
-            {/* <ProtectedRoute exact path="/" component={MainPageContainer} */}
+            <Route exact path="/" component={MainPageContainer} />
             {/* <ProtectedRoute exact path="/tracks/new" component={CreateTrackContainer}/> */}
             {/* <ProtectedRoute exact path="/tracks/edit" component={CreateTrackContainer} /> */}
             <AuthRoute exact path="/login" component={LogInFormContainer} />

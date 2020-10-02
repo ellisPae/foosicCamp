@@ -21,7 +21,7 @@ const usersReducer = (oldState = {}, action) => {
         case RECEIVE_TRACK:
             return Object.assign({}, oldState, action.artist)
         case RECEIVE_ALBUM:
-            return Object.assign({}, oldState, action.artist)
+            return action.artist
         default:
             return oldState;
     }

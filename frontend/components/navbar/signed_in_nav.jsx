@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-let FontAwesome = require('react-fontawesome')
+
 
 
 
@@ -31,6 +31,10 @@ class SignedInNav extends React.Component {
     // }
 
     render() {
+        // if (!this.props.currentUser) {
+        //     return null;
+        // }
+
         const dropdownClass = this.state.open ? "dropdown" : "hidden";
         const ddContainer = this.state.open ? "ddContainer" : "hidden";
     

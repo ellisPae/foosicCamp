@@ -2,10 +2,13 @@
 
 json.album do
     json.extract! @album, :id, :artist_id, :title, :price, :release_date, :description, :credits
+    json.picUrl @album.pic.attached? ? url_for(@album.pic) : ""
     json.tracks do
         @album.tracks.each do |track|
             json.set! track.id do
+                json.id track.id
                 json.trackUrl url_for(track.track)
+                json.title track.title
             end
         end
     end
@@ -19,7 +22,9 @@ json.artist do
     json.albums do
         @album.artist.albums.each do |album|
             json.set! album.id do
+                json.id album.id
                 json.title album.title
+                json.picUrl url_for(album.pic)
             end
         end
     end

@@ -18,6 +18,7 @@ export const receiveAllTracks = tracks => {
 export const receiveTrack = payload => {
 
     const { track, artistAlbums, artist, genres } = payload;
+    
     return {
         type: RECEIVE_TRACK,
         track, artistAlbums, artist, genres

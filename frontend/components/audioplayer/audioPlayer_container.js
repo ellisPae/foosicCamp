@@ -7,9 +7,10 @@ import AudioPlayer from './audioPlayer';
 
 const mSTP = state => {
 
+    
     return {
         currentTrack: state.ui.audioPlayer.track,
-        // tracks: Object.values(state.entities.tracks),
+        tracks: Object.values(state.entities.tracks),
         isPlaying: state.ui.audioPlayer.isPlaying
     }
 }
@@ -22,6 +23,8 @@ const mDTP = dispatch => {
         playTrack: () => dispatch(playTrack()),
         pauseTrack: () => dispatch(pauseTrack())
     }
+
+
 } 
 
 

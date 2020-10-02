@@ -1,25 +1,28 @@
 import React from 'react';
 
+
 class AudioPlayer extends React.Component {
     constructor(props) {
         super(props);
 
-
         this.audioPlayer = React.createRef();
+        // this.state = this.props
+        this.handleNext =this.handleNext.bind(this);
     }
-    
-    //ref options:
-    // -Play
-    // Pause
-    // last song
-    // next song
-    // timestamp / duration
-    // track title
-    
 
+    
     componentDidMount() {
-        this.props.setTrack(this.props.track)
+        if (!this.props.currentTrack) {
+            this.props.setTrack(this.props.tracks[0])
+        }
     }
+
+    // componentDidUpdate(prevProps) {
+    //     if (this.prevProps.matchParams.id !== this.props.ma) {}
+    //     this.props.setTrack(this.props.track)
+    // }
+
+
 
     // handlePlayPause() {
     //     if (this.props.isPlaying) {
@@ -29,8 +32,18 @@ class AudioPlayer extends React.Component {
     //     }
     // }
 
-
-
+    handleNext(e) {
+        e.preventDefault();
+        for (let i = 0; i < this.props.length; i++) {
+            let currentIdx = this.props.tracks.indexOf(this.props.currentTrack)
+            if (this.props.tracks.indexOf(this.props.tracks[i]) === currentIdx) {
+                this.props.currentTrack = this.props.tracks[i+1];
+                this.props.isPlaying = true;
+                return currentTrack;
+            }
+        
+        }
+    }
 
 
 
@@ -45,15 +58,22 @@ class AudioPlayer extends React.Component {
 
         return (
             <div className='player-container' >
+                <div className='track-show-title'><h2>{this.props.currentTrack.title}</h2></div>
+                <div className='track-show-by'><h5>by {this.props.artist.artist_name}</h5></div>
                 <audio className="player" src={this.props.currentTrack.trackUrl} ref={this.audioPlayer} controls>
                     {/* <div className='controllers'>
                         <button className='play-pause'onclick={this.handlePlayPause}><img src={playPauseButton}/></button>
                     </div> */}
+                    <button onClick={() => this.handleNext()}> <h3>Next</h3> </button>
                 </audio>
             </div>
         )
     }
 }
+
+
+
+
 
 
 export default AudioPlayer;

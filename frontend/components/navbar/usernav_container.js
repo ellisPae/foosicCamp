@@ -1,12 +1,15 @@
 import { connect } from 'react-redux';
-import MainNav from './main_nav';
+// import SignedInNav from './signed_in_nav';
 import { logout } from '../../actions/session_actions';
+import MainNav from './main_nav';
+
 
 
 
 
 
 const mSTP = ({ session, entities: { users } }) => {
+    
     return {
         currentUser: users[session.id]
     };
