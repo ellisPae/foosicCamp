@@ -11,22 +11,24 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "babel-loader": "^8.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "18",
+    "react-dom": "18",
     "react-fontawesome": "^1.7.1",
-    "react-redux": "^7.2.1",
+    "react-redux": "8",
     "react-router-dom": "^5.2.0",
-    "redux": "^4.0.5",
+    "redux": "4",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
+    "redux-thunk": "2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
-  "devDependencies": {},
   "engines": {
-    "node": "10.13.0",
-    "npm": "6.14.8"
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0",
+    "yarn": ">=4.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
